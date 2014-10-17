@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+   <!-- Add packages here -->
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="bookSearch" class="test.bookSearch">
+            <result name="success">/bookSearchResult.jsp</result>
+            <result name="error">/bookSearchResult.jsp</result>
+        </action>
+        <action name="bookInfo" class="test.showBookInfo">
+        	<result>/bookInfo.jsp</result>
+        </action>
+        <action name="deleteBook" class="test.DeleteBook">
+        	<result name="success">/NewFile.jsp</result>
+        </action>     
+    </package>
+
+    
+
+ 
+
+</struts>
